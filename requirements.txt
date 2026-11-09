@@ -1,0 +1,7 @@
+aiogram>=3.31.0
+qrcode
+pillow
+aiohttp
+requests>=2.31
+python-dotenv>=1.0
+pymongo[srv]>=4.6

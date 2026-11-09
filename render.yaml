@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: averon-deals-bot
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.7
+      - key: BOT_TOKEN
+        sync: false
+      - key: GATEWAY_API_KEY
+        sync: false
+      - key: GATEWAY_SECRET_KEY
+        sync: false
+      - key: COUPONSHOPS_API_KEY
+        sync: false
+      - key: ACCZONE_API_KEY
+        sync: false
+      - key: ELITE_API_KEY
+        sync: false
